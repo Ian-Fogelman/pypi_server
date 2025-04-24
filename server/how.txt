@@ -1,0 +1,26 @@
+1. cd server  
+2. pip install pypiserver   
+3. mkdir ~/packages  
+4. Check the actual path (windows): Resolve-Path ~/packages 
+   i.e: C:\Users\Ian\packages
+5. copy your package to /server/packages (both .tar.gz and .whl????)
+6. pypi-server run -p 3001 ~/packages
+7. from the client run the following command:
+   pip install --extra-index-url http://localhost:3001/simple/ math_operations
+
+pypiserver_project/
+├── packages/                    # Directory where package files are stored
+│   ├── package_name1/
+│   │   ├── package_name1-0.1.0-py3-none-any.whl
+│   │   ├── package_name1-0.1.0.tar.gz
+│   ├── package_name2/
+│   │   ├── package_name2-1.0.0-py3-none-any.whl
+│   │   ├── package_name2-1.0.0.tar.gz
+├── .htpasswd                   # (Optional) File for HTTP basic authentication
+├── config.ini                  # (Optional) Configuration file for pypiserver
+├── simple/                     # (Auto-generated) Directory for PEP 503 simple API
+│   ├── package_name1/
+│   │   ├── index.html         # Metadata for package_name1
+│   ├── package_name2/
+│   │   ├── index.html         # Metadata for package_name2
+└── Dockerfile                  # (Optional) For containerized deployment

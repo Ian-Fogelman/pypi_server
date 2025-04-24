@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: math_operations
+Version: 0.1.0
+Summary: A simple package with sum and subtract functions
+Author: Your Name
+Author-email: your.email@example.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+Math Operations
+
+A simple Python package providing basic arithmetic functions: sum and subtract.
+
+Installation
+
+pip install math_operations
+
+Usage
+
+```
+from math_operations import sum_numbers, subtract_numbers
+
+# Add two numbers
+result1 = sum_numbers(5, 3)  # Returns 8
+
+# Subtract two numbers
+result2 = subtract_numbers(5, 3)  # Returns 2
+```
+
+License
+
+MIT
