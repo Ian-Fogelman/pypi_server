@@ -1,12 +1,11 @@
-1. cd server  
-2. pip install pypiserver   
-3. mkdir ~/packages  
-4. Check the actual path (windows): Resolve-Path ~/packages 
+1. pip install pypiserver   
+2. mkdir ~/packages  
+3. Check the actual path (windows): Resolve-Path ~/packages 
    i.e: C:\Users\Ian\packages
-5. copy your package to /server/packages (both .tar.gz and .whl????)
-6. pypi-server run -p 3001 ~/packages
-7. from the client run the following command:
-   pip install --extra-index-url http://localhost:3001/simple/ math_operations
+4. Copy your package to ~/packages location, including the folder name with both .tar.gz and .whl.
+5. ```pypi-server run -p 3001 ~/packages```
+6. from the client run the following command:
+   ```pip install --extra-index-url http://localhost:3001/simple/ math_operations```
 
 pypiserver_project/
 ├── packages/                    # Directory where package files are stored
